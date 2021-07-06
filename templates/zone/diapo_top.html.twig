@@ -1,6 +1,11 @@
 <div class="zone diapo_top {{ zone.subtype }} {{ page.type.name }}">
     <div class="content">
         <h{{zone.typehead}} class="title">{{ zone.detail(locale).title }}</h{{ zone.typehead}}>
+        {% if zone.detail(locale).title2 is not null %}
+            <h{{zone.typehead}} class="title">{{ zone.detail(locale).title2 }}</h{{ zone.typehead}}>
+        {% endif %}
+
+
         <div class="desc">{{ zone.detail(locale).description | raw }}</div>
         <div class="desc">{{ zone.detail(locale).description2 | raw }}</div>
 
