@@ -10,19 +10,27 @@
         {% endif %}
 
         {% if infos.adress is not null %}
-            {{ infos.adress }}
-            {{ infos.cp }} {{ infos.city }}
+
+                {{ infos.adress }}
+                {{ infos.cp }} {{ infos.city }}
+
+
         {% endif %}
 
 
 
 
        </div>
-    <div class="logo">
-        <a href="{{ path("homepage",{'_locale' : locale}) }}">
-            <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
-        </a>
-    </div>
+    {% if file_exist('img/logo.png') %}
+
+        <div class="logo">
+            <a href="{{ path("homepage",{'_locale' : locale}) }}">
+
+                <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
+            </a>
+        </div>
+
+    {% endif %}
 
     <div class="lienmenu">
         {% if infos.tel is not null %}

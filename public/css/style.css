@@ -1335,21 +1335,6 @@ h6 {
 .zone .title {
   font-family: NewYork;
 }
-.align_content_right {
-  align-content: right;
-}
-.text_right {
-  text-align: right;
-}
-.top0 {
-  top: 0;
-}
-.left0 {
-  left: 0;
-}
-.right0 {
-  right: 0;
-}
 .photo {
   justify-content: center;
   background: #ededed;
@@ -1363,15 +1348,17 @@ h6 {
 .photo.loaded > img {
   opacity: 1;
 }
-p {
-  line-height: 2;
+.btn {
+  background-color: #69696B;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px !important;
 }
-a {
-  color: #000;
-  transition: color 500ms;
-}
-a:hover {
-  color: #e13536;
+.btn:hover {
+  transition: all 1s ease;
+  background-color: white;
+  color: #69696B;
 }
 header {
   display: flex;
@@ -1399,6 +1386,7 @@ header .lienmenu {
 }
 header .lienmenu a {
   padding: 10px;
+  margin: 0 10px;
   color: white;
 }
 header .lienmenu a i {
@@ -1420,6 +1408,9 @@ header .lienmenu:last-child {
   header .lienmenu span {
     display: none;
   }
+  header .lienmenu:first-child {
+    text-align: center;
+  }
   header .socials {
     flex-direction: column;
   }
@@ -1440,9 +1431,9 @@ header .lienmenu:last-child {
   height: 100%;
 }
 .zone.diapo_top .content .title {
-  margin: 30px 50px 50px 30px;
+  margin: 30px;
   line-height: 1;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 8px;
   text-align: center;
   color: white;
@@ -1450,7 +1441,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .content .desc {
   position: relative;
-  font-size: 30px;
+  font-size: 24px;
   color: white;
   letter-spacing: 1px;
   text-align: center;
