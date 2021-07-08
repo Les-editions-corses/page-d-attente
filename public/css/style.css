@@ -1348,18 +1348,6 @@ h6 {
 .photo.loaded > img {
   opacity: 1;
 }
-.btn {
-  background-color: #69696B;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 10px !important;
-}
-.btn:hover {
-  transition: all 1s ease;
-  background-color: white;
-  color: #69696B;
-}
 header {
   display: flex;
   background-color: transparent;
@@ -1379,10 +1367,24 @@ header .logo img {
   width: 150px;
 }
 header .lienmenu {
+  margin-top: 20px;
   flex: 2;
   color: white;
   padding: 25px 50px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+header .lienmenu .btn {
+  padding: 20px 30px;
+  transition: all 500ms ease-in-out;
+}
+header .lienmenu .btn a {
+  background: #69696B;
+  font-size: 22px;
+}
+header .lienmenu .btn:hover a {
+  background: #4b4e53;
 }
 header .lienmenu a {
   padding: 10px;
@@ -1394,22 +1396,33 @@ header .lienmenu a i {
 }
 header .lienmenu:first-child {
   text-align: left;
+  justify-content: flex-start;
 }
 header .lienmenu:last-child {
   text-align: right;
+  justify-content: flex-end;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
   header .lienmenu {
+    margin-top: 0;
     font-size: 14px;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
+  }
+  header .lienmenu .btn {
+    margin-bottom: 10px;
   }
   header .lienmenu span {
     display: none;
   }
   header .lienmenu:first-child {
     text-align: center;
+    justify-content: flex-start;
+  }
+  header .lienmenu:last-child {
+    justify-content: unset;
+    align-items: flex-end;
   }
   header .socials {
     flex-direction: column;
