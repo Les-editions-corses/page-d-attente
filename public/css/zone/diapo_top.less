@@ -30,6 +30,31 @@
       text-align: center;
       padding: 20px;
     }
+
+    .c-reserver{
+      background: rgba(255,255,255,.8);
+      padding: 2px;
+      margin-top: 50px;
+
+      .reserver {
+        text-transform: uppercase;
+
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+        display: inline-block;
+        padding: 15px;
+        color: @primary;
+        font-weight: bold;
+
+
+        .btn-border-slide(transparent, @primary, 1px, 1s);
+        &:hover {
+          color: @primary;
+        }
+      }
+    }
+
+
   }
 
 

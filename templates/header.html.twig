@@ -5,12 +5,6 @@
          <a href="https://gc.synxis.com/rez.aspx?Hotel=63622&Chain=5154&template=RES_ROUGEMENT_V1&shell=RES_ROUGEMENT_V1&locale=fr-FR&src=rougemont&_ga=2.192068330.1575028940.1552404627-1241374183.1552404627" class="btn">RESERVER</a>
 
         #}
-        {% if infos.resa is not null %}
-            <div class="btn">
-                <a href="{{ infos.resa }}" class="btn">RESERVER</a>
-            </div>
-
-        {% endif %}
 
         {% if infos.adress is not null %}
 
@@ -34,6 +28,7 @@
         </div>
 
     {% endif %}
+
 
     <div class="lienmenu">
         {% if infos.tel is not null %}

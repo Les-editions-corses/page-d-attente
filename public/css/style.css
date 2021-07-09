@@ -1375,17 +1375,6 @@ header .lienmenu {
   display: flex;
   align-items: center;
 }
-header .lienmenu .btn {
-  padding: 20px 30px;
-  transition: all 500ms ease-in-out;
-}
-header .lienmenu .btn a {
-  background: #69696B;
-  font-size: 22px;
-}
-header .lienmenu .btn:hover a {
-  background: #4b4e53;
-}
 header .lienmenu a {
   padding: 10px;
   margin: 0 10px;
@@ -1459,6 +1448,105 @@ header .lienmenu:last-child {
   letter-spacing: 1px;
   text-align: center;
   padding: 20px;
+}
+.zone.diapo_top .content .c-reserver {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px;
+  margin-top: 50px;
+}
+.zone.diapo_top .content .c-reserver .reserver {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  padding: 15px;
+  color: #03224c;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  overflow: hidden;
+}
+.zone.diapo_top .content .c-reserver .reserver:before,
+.zone.diapo_top .content .c-reserver .reserver:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: transparent;
+}
+.zone.diapo_top .content .c-reserver .reserver:before {
+  top: 0;
+}
+.zone.diapo_top .content .c-reserver .reserver:after {
+  bottom: 0;
+}
+.zone.diapo_top .content .c-reserver .reserver:hover > * > *:before,
+.zone.diapo_top .content .c-reserver .reserver:hover > * > *:after {
+  transform: translate3d(0, 0, 0);
+}
+.zone.diapo_top .content .c-reserver .reserver:hover > * > * > *:before,
+.zone.diapo_top .content .c-reserver .reserver:hover > * > * > *:after {
+  transform: translate3d(0, 0, 0);
+}
+.zone.diapo_top .content .c-reserver .reserver > *:before,
+.zone.diapo_top .content .c-reserver .reserver > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: transparent;
+}
+.zone.diapo_top .content .c-reserver .reserver > *:before {
+  left: 0;
+}
+.zone.diapo_top .content .c-reserver .reserver > *:after {
+  right: 0;
+}
+.zone.diapo_top .content .c-reserver .reserver > * > *:before,
+.zone.diapo_top .content .c-reserver .reserver > * > *:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  height: 1px;
+  width: 100%;
+  background-color: #03224c;
+}
+.zone.diapo_top .content .c-reserver .reserver > * > *:before {
+  top: 0;
+  transform: translate3d(-105%, 0, 0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.zone.diapo_top .content .c-reserver .reserver > * > *:after {
+  bottom: 0;
+  transform: translate3d(105%, 0, 0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.zone.diapo_top .content .c-reserver .reserver > * > * > *:before,
+.zone.diapo_top .content .c-reserver .reserver > * > * > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  height: 100%;
+  width: 1px;
+  background-color: #03224c;
+}
+.zone.diapo_top .content .c-reserver .reserver > * > * > *:before {
+  left: 0;
+  transform: translate3d(0, 105%, 0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.zone.diapo_top .content .c-reserver .reserver > * > * > *:after {
+  right: 0;
+  transform: translate3d(0, -105%, 0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.zone.diapo_top .content .c-reserver .reserver:hover {
+  color: #03224c;
 }
 .zone.diapo_top .swiper-container {
   position: absolute;

@@ -9,6 +9,21 @@
         <div class="desc">{{ zone.detail(locale).description | raw }}</div>
         <div class="desc">{{ zone.detail(locale).description2 | raw }}</div>
 
+
+        {% if infos.resa is not null %}
+        <div class="c-reserver">
+            <a href="{{ infos.resa }}" target="_blank" class="reserver">
+              <span>
+                  <span>
+                    <span>{% trans %}Réserver Maintenant{% endtrans %}</span>
+                  </span>
+              </span>
+            </a>
+        </div>
+
+
+        {% endif %}
+
     </div>
     <div class="swiper-container">
         <!-- Additional required wrapper -->
