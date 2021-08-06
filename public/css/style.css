@@ -1421,6 +1421,14 @@ header .lienmenu:last-child {
   position: relative;
   height: 100vh;
 }
+.zone.diapo_top video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .zone.diapo_top .content {
   display: flex;
   flex-direction: column;
