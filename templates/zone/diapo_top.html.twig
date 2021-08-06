@@ -25,19 +25,31 @@
         {% endif %}
 
     </div>
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            {% for photo in zone.photos  %}
-                <div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
-                    <img alt="{{ photo.detail(locale).title }}" />
-                </div>
-            {% endfor %}
+    {% if zone.videos.count != 0 %}
+
+
+    <video loop muted  class="video-parallax"  playsinline>
+        <source src="{{ asset('uploads/'~ zone.videos.0.path) }}" type="video/mp4">
+    </video>
+
+    {% else %}
+
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                {% for photo in zone.photos  %}
+                    <div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
+                        <img alt="{{ photo.detail(locale).title }}" />
+                    </div>
+                {% endfor %}
+
+
+            </div>
+            <div class="swiper-controls">
+                <div class="swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
+                <div class="swiper-button-next"><i class="fal fa-chevron-right"></i></div>
+            </div>
         </div>
-        <div class="swiper-controls">
-            <div class="swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
-            <div class="swiper-button-next"><i class="fal fa-chevron-right"></i></div>
-        </div>
-    </div>
+    {% endif %}
 </div>
