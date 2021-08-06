@@ -32,9 +32,16 @@
 
     <div class="lienmenu">
         {% if infos.tel is not null %}
-            <a href={{ infos.tel }} class="tel">
+            <a href="tel:{{ infos.tel }}" class="tel">
                 <i class="fas fa-phone"></i>
                 <span>{{ infos.tel }}</span>
+            </a>
+        {% endif %}
+
+        {% if infos.mobile is not null %}
+            <a href="tel:{{ infos.mobile }}" class="tel">
+                <i class="far fa-mobile"></i>
+                <span>{{ infos.mobile }}</span>
             </a>
         {% endif %}
 
