@@ -1,4 +1,15 @@
 <div class="zone diapo_top {{ zone.subtype }} {{ page.type.name }}">
+    {% if file_exist('img/logo_white.png') %}
+
+        <div class="logo">
+
+
+                <img data-src="{{ asset('img/logo_white.png') }}" class="lazy" alt="logo">
+
+        </div>
+
+    {% endif %}
+
     <div class="content">
         <h{{zone.typehead}} class="title">{{ zone.detail(locale).title }}</h{{ zone.typehead}}>
         {% if zone.detail(locale).title2 is not null %}
