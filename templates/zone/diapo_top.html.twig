@@ -1,70 +1,13 @@
-
-<header>
-    <div class="lienmenu">
-        {#
-         <a href="https://gc.synxis.com/rez.aspx?Hotel=63622&Chain=5154&template=RES_ROUGEMENT_V1&shell=RES_ROUGEMENT_V1&locale=fr-FR&src=rougemont&_ga=2.192068330.1575028940.1552404627-1241374183.1552404627" class="btn">RESERVER</a>
-
-        #}
-
-        {% if infos.adress is not null %}
-
-            {{ infos.adress }}</br>
-            {{ infos.cp }} {{ infos.city }}
-        {% endif %}
-    </div>
-
-    <div class="lienmenu">
-        {% if infos.tel is not null %}
-            <a href="tel:{{ infos.tel }}" class="tel">
-                <i class="fas fa-phone"></i>
-                <span>{{ infos.tel }}</span>
-            </a>
-        {% endif %}
-
-        {% if infos.mobile is not null %}
-            <a href="tel:{{ infos.mobile }}" class="tel">
-                <i class="far fa-mobile"></i>
-                <span>{{ infos.mobile }}</span>
-            </a>
-        {% endif %}
-
-        {% if infos.mail is not null %}
-            <a href="mailto:{{ infos.mail }}" class="tel">
-                <i class="fas fa-at"></i>
-                <span>{{ infos.mail }}</span>
-            </a>
-        {% endif %}
-
-
-        {% if infos.facebook is not null %}
-            <a href={{ infos.facebook }} class="tel">
-                <i class="fab fa-facebook"></i>
-                <span></span>
-            </a>
-        {% endif %}
-
-        {% if infos.twitter is not null %}
-            <a href={{ infos.twitter }} class="tel">
-                <i class="fab fa-twitter"></i>
-                <span></span>
-            </a>
-        {% endif %}
-
-        {% if infos.insta is not null %}
-            <a href={{ infos.insta }} class="tel">
-                <i class="fab fa-instagram"></i>
-                <span></span>
-            </a>
-        {% endif %}
-
-    </div>
-</header>
-
 <div class="zone diapo_top {{ zone.subtype }} {{ page.type.name }}">
     {% if file_exist('img/logo_white.png') %}
+
         <div class="logo">
+
+
                 <img data-src="{{ asset('img/logo_white.png') }}" class="lazy" alt="logo">
+
         </div>
+
     {% endif %}
 
     <div class="content">
