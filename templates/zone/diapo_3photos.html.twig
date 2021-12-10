@@ -1,0 +1,85 @@
+
+
+
+
+<div class="zone diapo_3photos {{ zone.subtype }} {{ page.type.name }}">
+
+
+
+    <div class="head">
+        <div class="top">
+
+            {% if file_exist('img/logo.png') %}
+                <div class="logo">
+                    <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
+                </div>
+            {% else %}
+                <div class="title">
+                    {{ infos.name }}
+                </div>
+            {% endif %}
+
+            <div class="text">
+                <p>
+                    {{ infos.adress }} {{ infos.cp }} {{ infos.city }}
+                </p>
+
+                <p>
+                    Un conseil, un devis contactez nous au : </br>
+                    {{ infos.tel }} Email : {{ infos.mail }}
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+{#
+    <div class="content">
+        <h{{zone.typehead}} class="title">{{ zone.detail(locale).title }}</h{{ zone.typehead}}>
+        <div class="desc">{{ zone.detail(locale).description | raw }}</div>
+
+        {% if infos.resa is not null %}
+            <div class="c-reserver">
+                <a href="{{ infos.resa }}" target="_blank" class="reserver">
+              <span>
+                  <span>
+                    <span>{% trans %}Réserver Maintenant{% endtrans %}</span>
+                  </span>
+              </span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+#}
+
+    {% if zone.videos.count != 0 %}
+
+        <video loop muted  class="video-parallax"  playsinline>
+            <source src="{{ asset('uploads/'~ zone.videos.0.path) }}" type="video/mp4">
+        </video>
+
+    {% else %}
+
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                {% for photo in zone.photos  %}
+                    <div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
+                        <div class="title">
+                            {{ photo.detail(locale).title }}
+                        </div>
+                        <img alt="{{ photo.detail(locale).title }}" />
+                    </div>
+                {% endfor %}
+
+
+            </div>
+            <div class="swiper-controls">
+                <div class="swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
+                <div class="swiper-button-next"><i class="fal fa-chevron-right"></i></div>
+            </div>
+        </div>
+    {% endif %}
+</div>
