@@ -1598,6 +1598,18 @@ header .lienmenu:last-child {
   height: 100%;
   filter: brightness(0.9);
 }
+.zone.diapo_top .swiper-container .swiper-wrapper .swiper-slide .title {
+  position: absolute;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial;
+}
 .zone.diapo_top .swiper-controls {
   position: absolute;
   top: 50%;

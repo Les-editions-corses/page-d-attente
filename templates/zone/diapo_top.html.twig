@@ -4,7 +4,7 @@
         <div class="logo">
 
 
-                <img data-src="{{ asset('img/logo_white.png') }}" class="lazy" alt="logo">
+                <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
 
         </div>
 
@@ -52,9 +52,11 @@
                 {% for photo in zone.photos  %}
                     <div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
                         <img alt="{{ photo.detail(locale).title }}" />
+                        {% if photo.detail(locale).title is not null %}
+                            <div class="title">{{ photo.detail(locale).title }}</div>
+                        {% endif %}
                     </div>
                 {% endfor %}
-
 
             </div>
             <div class="swiper-controls">
@@ -63,4 +65,7 @@
             </div>
         </div>
     {% endif %}
+
+
+
 </div>
