@@ -1449,7 +1449,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .logo img {
   height: 100%;
-  width: 100%;
+  object-fit: contain;
 }
 .zone.diapo_top .content {
   display: flex;
