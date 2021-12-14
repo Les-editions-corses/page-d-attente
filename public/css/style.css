@@ -1608,7 +1608,7 @@ header .lienmenu:last-child {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  font-family: Arial;
+  letter-spacing: 2px;
 }
 .zone.diapo_top .swiper-controls {
   position: absolute;
