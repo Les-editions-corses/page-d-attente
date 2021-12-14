@@ -1443,8 +1443,8 @@ header .lienmenu:last-child {
   background: rgba(0, 0, 0, 0.2);
 }
 .zone.diapo_top .logo {
-  margin-top: 100px;
-  height: 250px;
+  margin-top: 50px;
+  height: 180px;
   z-index: 2;
 }
 .zone.diapo_top .logo img {
