@@ -35,6 +35,34 @@
 
         {% endif %}
 
+        {% for pageContact in pages | filter(pageContact => pageContact.type.name == "contact") %}
+
+            <div class="c-reserver">
+                <a data-fancybox href="#diapocontact" id="start" class="reserver">
+
+                    <span>
+                         <span>
+                            <span> {{pageContact.detail(locale).title}}</span>
+                         </span>
+                    </span>
+                </a>
+
+            </div>
+            <div id="diapocontact" style="display:none;">
+                <div class="text">
+                    <div class="titre">Nous Contacter</div>
+                </div>
+                <div class="formulaire">
+                    {{ render(controller(
+                        'App\\Controller\\ContactController::contact',
+                        {'_locale':locale}
+                    )) }}
+                </div>
+            </div>
+
+
+        {% endfor %}
+
     </div>
     {% if zone.videos.count != 0 %}
 
