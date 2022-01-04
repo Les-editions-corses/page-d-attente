@@ -26,3 +26,5 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+/public/img/logo_white.png 
+/public/img/thumbnails/ 

@@ -4,7 +4,7 @@
         <div class="logo">
 
 
-                <img data-src="{{ asset('img/logo_white.png') }}" class="lazy" alt="logo">
+                <img data-src="{{ asset('img/logo_white.png') | thumbnail(250) }}" class="lazy" alt="logo">
 
         </div>
 
@@ -38,7 +38,7 @@
         {% for pageContact in pages | filter(pageContact => pageContact.type.name == "contact") %}
 
             <div class="c-reserver">
-                <a data-fancybox href="#diapocontact" id="start" class="reserver">
+                <a data-fancybox href="#diapocontact" id="start" class="reserver fancy">
 
                     <span>
                          <span>

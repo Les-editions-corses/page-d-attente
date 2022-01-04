@@ -38,17 +38,13 @@ class ContactForm extends AbstractType
 
         $builder->add('name', TextType::class, array(
             'label'=> 'Nom',
+            'attr'  => [
+                'placeholder'   => 'Votre nom *'
+            ],
             'constraints' => array(
                 new NotBlank()
             )
         ))
-            ->add('email', EmailType::class, array(
-                'label'=> 'E-mail',
-                'constraints' => array(
-                    new NotBlank(),
-                    new Email()
-                )
-            ))
             ->add('phone', TextType::class, array(
                 'label'=> 'Telephone',
                 'attr'  => [
@@ -62,14 +58,23 @@ class ContactForm extends AbstractType
                     ])
                 ),
             ))
-            ->add('subject', TextType::class, array(
-                'label'=> 'Sujet',
+
+            ->add('email', EmailType::class, array(
+                'label'=> 'E-mail',
+                'attr'  => [
+                    'placeholder'   => 'Votre email *'
+                ],
                 'constraints' => array(
-                    new NotBlank()
+                    new NotBlank(),
+                    new Email()
                 )
             ))
+
             ->add('message', TextareaType::class, array(
                 'label'=> 'Message',
+                'attr'  => [
+                    'placeholder'   => 'Votre message *'
+                ],
                 'constraints' => array(
                     new NotBlank()
                 )
