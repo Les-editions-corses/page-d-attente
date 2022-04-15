@@ -1403,6 +1403,14 @@ header .lienmenu:last-child {
 }
 @media all and (max-width: 900px) {
   header .lienmenu {
+    font-size: 16px;
+  }
+  header .lienmenu a i {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 900px) {
+  header .lienmenu {
     margin-top: 0;
     font-size: 14px;
     padding: 20px 0;
