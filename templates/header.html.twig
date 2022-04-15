@@ -35,26 +35,30 @@
 
 
     <div class="lienmenu">
-        {% if infos.tel is not null %}
-            <a href="tel:{{ infos.tel }}" class="tel">
-                <i class="fas fa-phone"></i>
-                <span>{{ infos.tel }}</span>
-            </a>
-        {% endif %}
+        <div class="c-menu">
+            {% if infos.tel is not null %}
+                <a href="tel:{{ infos.tel }}" class="tel">
+                    <i class="fas fa-phone"></i>
+                    <span>{{ infos.tel }}</span>
+                </a>
+            {% endif %}
 
-        {% if infos.mobile is not null %}
-            <a href="tel:{{ infos.mobile }}" class="tel">
-                <i class="far fa-mobile"></i>
-                <span>{{ infos.mobile }}</span>
-            </a>
-        {% endif %}
+            {% if infos.mobile is not null %}
+                <a href="tel:{{ infos.mobile }}" class="tel">
+                    <i class="far fa-mobile"></i>
+                    <span>{{ infos.mobile }}</span>
+                </a>
+            {% endif %}
+            {% if infos.mail is not null %}
+                <a href="mailto:{{ infos.mail }}" class="tel">
+                    <i class="fas fa-at"></i>
+                    <span>{{ infos.mail }}</span>
+                </a>
+            {% endif %}
 
-        {% if infos.mail is not null %}
-            <a href="mailto:{{ infos.mail }}" class="tel">
-                <i class="fas fa-at"></i>
-                <span>{{ infos.mail }}</span>
-            </a>
-        {% endif %}
+        </div>
+
+
 
 
             {% if infos.facebook is not null %}

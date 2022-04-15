@@ -1375,6 +1375,16 @@ header .lienmenu {
   display: flex;
   align-items: center;
 }
+header .lienmenu .c-menu {
+  display: flex;
+  flex-direction: column;
+}
+header .lienmenu:nth-child(1) {
+  flex: 1;
+}
+header .lienmenu:nth-child(2) {
+  flex: 2;
+}
 header .lienmenu a {
   padding: 10px;
   margin: 0 10px;
