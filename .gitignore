@@ -4,6 +4,7 @@
 /.idea
 /public/bundles/
 /public/uploads/
+/public/im/logo.png
 
 /var/
 /vendor/
