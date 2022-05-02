@@ -1462,6 +1462,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .logo {
   margin-top: 150px;
+  max-height: 180px;
   z-index: 2;
 }
 .zone.diapo_top .logo img {
