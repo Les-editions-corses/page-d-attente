@@ -1356,6 +1356,7 @@ header {
   z-index: 99;
   justify-content: space-between;
   position: fixed;
+  align-items: flex-start;
 }
 header .logo {
   flex: 1;
@@ -1367,7 +1368,6 @@ header .logo img {
   width: 150px;
 }
 header .lienmenu {
-  margin-top: 20px;
   flex: 2;
   color: white;
   padding: 25px 50px;
