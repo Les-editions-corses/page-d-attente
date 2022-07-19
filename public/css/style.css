@@ -1497,6 +1497,12 @@ header .lienmenu:last-child {
   text-align: center;
   padding: 20px;
 }
+.zone.diapo_top .content .btn {
+  color: black;
+  background: white;
+  padding: 7px 15px;
+  font-size: 18px;
+}
 .zone.diapo_top .content .c-reserver {
   background: rgba(255, 255, 255, 0.8);
   padding: 2px;
@@ -1784,4 +1790,3 @@ header .lienmenu:last-child {
     margin-right: 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
