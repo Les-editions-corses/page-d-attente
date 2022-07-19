@@ -17,6 +17,11 @@
         <div class="desc">{{ zone.detail(locale).description | raw }}</div>
         <div class="desc">{{ zone.detail(locale).description2 | raw }}</div>
 
+        {% for doc in zone.documents %}
+        <a class="btn" href="{{ asset('uploads/' ~ doc.file.file) }}" class="file-link" target="_blank">Voir les tarifs</a>
+        {% endfor %}
+
+
 
         {% if infos.resa is not null %}
         <div class="c-reserver">
