@@ -75,7 +75,7 @@ class ContactController extends AbstractController
                         if($infos === null){
                             throw new InvalidConfigurationException($this->trans('contact.errors.informations'));
                         }
-                        $from = (getenv('APP_ENV') === 'prod') ? 'noreply@'.str_replace('www.', '', $_SERVER['HTTP_HOST']) : 'web@e-corses.com';
+                        $from = (getenv('APP_ENV') === 'prod') ? 'noreply@'.str_replace('www.', '', $_SERVER['HTTP_HOST']) : 'assistance@leseditionscorses.com';
 
 
                         $webmasterMail = (new \Swift_Message($this->trans('contact.oneRequest').$_SERVER['HTTP_HOST']))

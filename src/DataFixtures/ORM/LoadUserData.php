@@ -36,59 +36,26 @@ class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerA
 
         $users = array();
         /*
-         * Seb
+         * Matthieu
          */
         $users[] = $userManager->createUser()
-            ->setUsername('sebastien@e-corses.com')
-            ->setEmail('sebastien@e-corses.com')
+            ->setUsername('matthieu@leseditionscorses.com')
+            ->setEmail('matthieu@leseditionscorses.com')
             ->setFirstConnexion(true)
             ->setRoles(array('ROLE_SUPER_ADMIN'));
-        /*
-         * Youssef
-         */
-        $users[] = $userManager->createUser()
-            ->setUsername('youssefs@e-corses.com')
-            ->setEmail('youssef@e-corses.com')
-            ->setFirstConnexion(true)
-            ->setRoles(array('ROLE_SUPER_ADMIN'));
-        /*
-         * pierre-louis
-         */
-        $users[] = $userManager->createUser()
-            ->setUsername('pierre-louis@e-corses.com')
-            ->setEmail('pierre-louis@e-corses.com')
-            ->setFirstConnexion(true)
-            ->setRoles(array('ROLE_SUPER_ADMIN'));
-        /*
-         * FA
-         */
-        $users[] = $userManager->createUser()
-            ->setUsername('fa@e-corses.com')
-            ->setEmail('fa@e-corses.com')
-            ->setFirstConnexion(true)
-            ->setRoles(array('ROLE_SUPER_ADMIN'));
-        /*
-         * MARINE
-         */
-        $users[] = $userManager->createUser()
-            ->setUsername('m.savreux@e-corses.com')
-            ->setEmail('m.savreux@e-corses.com')
-            ->setFirstConnexion(true)
-            ->setRoles(array('ROLE_ADMIN'));
+
         /*
          * Web
          */
         $users[] = $userManager->createUser()
-            ->setUsername('web@e-corses.com')
-            ->setEmail('web@e-corses.com')
+            ->setUsername('assistance@leseditionscorses.com')
+            ->setEmail('assistance@leseditionscorses.com')
             ->setFirstConnexion(true)
             ->setRoles(array('ROLE_SUPER_ADMIN'));
-        /*
-         * Axel
-         */
+
         $users[] = $userManager->createUser()
-            ->setUsername('axel@e-corses.com')
-            ->setEmail('axel@e-corses.com')
+            ->setUsername('web@e-corses.com')
+            ->setEmail('web@e-corses.com')
             ->setFirstConnexion(true)
             ->setRoles(array('ROLE_SUPER_ADMIN'));
 
@@ -100,7 +67,7 @@ class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerA
             var_dump($pass);
 
             $message = (new \Swift_Message('Création de compte'))
-                ->setFrom('web@e-corses.com')
+                ->setFrom('assistance@leseditionscorses.com')
                 ->setTo($user->getEmail())
                 ->setBody(
                     $templating->render(

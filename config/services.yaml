@@ -24,7 +24,7 @@ fos_user:
     firewall_name: main
     user_class:    ScyLabs\NeptuneBundle\Entity\User
     from_email:
-        address:       web@e-corses.com
+        address:       assistance@leseditionscorses.com
         sender_name:  Les editions corses
 
 services:
