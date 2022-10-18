@@ -1,56 +1,51 @@
-.zone.diapo_top{
-  position:relative;
+.zone.diapo_top {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  video{
+  video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
-  &:before
-  {
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
   }
-  .logo{
+  .logo {
     margin-top: 150px;
     //max-height: 180px;
-    max-height : 250px;
+    max-height: 250px;
 
-    
     z-index: 2;
-    img{
-
+    img {
       height: 100%;
       object-fit: contain;
     }
   }
 
-  .content{
-
+  .content {
     display: flex;
     flex-direction: column;
-    width:100%;
-    color:#fff;
+    width: 100%;
+    color: #fff;
     position: relative;
-    z-index:5;
+    z-index: 5;
     align-items: center;
     justify-content: center;
     height: 100%;
-    .title{
+    .title {
       margin: 30px;
       line-height: 1;
       font-size: 40px;
@@ -59,7 +54,7 @@
       color: white;
       text-transform: uppercase;
     }
-    .desc{
+    .desc {
       position: relative;
       font-size: 19px;
       max-width: 1100px;
@@ -75,20 +70,19 @@
       font-size: 18px;
     }
 
-    .c-reserver{
-      background: rgba(255,255,255,.8);
+    .c-reserver {
+      background: rgba(255, 255, 255, 0.8);
       padding: 2px;
       margin-top: 50px;
 
       .reserver {
         //text-transform: uppercase;
         font-size: 1.5rem;
-        letter-spacing: .1rem;
+        letter-spacing: 0.1rem;
         display: inline-block;
         padding: 15px;
         color: @primary;
         font-weight: bold;
-
 
         .btn-border-slide(transparent, @primary, 1px, 1s);
         &:hover {
@@ -97,32 +91,35 @@
       }
     }
 
-
+    .btn-group {
+      display: flex;
+      gap: 30px;
+      margin: 30px;
+    }
   }
 
-
-  .swiper-container{
-    position:absolute;
-    left:0;
-    top:0;
-    height:100%;
+  .swiper-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    .swiper-wrapper{
+    .swiper-wrapper {
       height: 100%;
-      .swiper-slide{
-        height:100% !important;
+      .swiper-slide {
+        height: 100% !important;
 
-        img{
-          left:0;
-          top:0;
-          width:100%;
-          height:100%;
+        img {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
           filter: brightness(0.9);
         }
-        .title{
+        .title {
           position: absolute;
           padding: 20px;
-          background: rgba(0,0,0,.8);
+          background: rgba(0, 0, 0, 0.8);
           color: white;
           bottom: 0;
           left: 0;
@@ -130,57 +127,48 @@
           text-align: center;
           text-transform: uppercase;
           letter-spacing: 2px;
-
         }
       }
     }
   }
 
-  .swiper-controls{
+  .swiper-controls {
     position: absolute;
     top: 50%;
     left: 0;
     display: flex;
     width: 100%;
-    .swiper-button-prev{
+    .swiper-button-prev {
       margin-left: 10px;
     }
-    .swiper-button-next{
+    .swiper-button-next {
       margin-left: auto;
       margin-right: 10px;
     }
   }
 }
 
-
-@media screen and (max-width : 800px)
-{
-  .zone.diapo_top{
-
-    .content{
-      .title{
+@media screen and (max-width: 800px) {
+  .zone.diapo_top {
+    .content {
+      .title {
         font-size: 24px;
         letter-spacing: 4px;
       }
-      .desc{
+      .desc {
         font-size: 14px;
-
       }
     }
   }
-
-
 }
-
 
 #diapocontact {
   width: 60%;
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, 0.3);
   color: black;
   padding: 6rem 8rem;
 
   button {
-
     text-transform: uppercase;
     cursor: pointer;
     background: white;
@@ -189,19 +177,17 @@
     font-weight: 600;
     border: none;
   }
-  .text{
-    .titre{
+  .text {
+    .titre {
       color: white;
       font-size: 1.8rem;
       margin-bottom: 50px;
       margin-top: 20px;
       text-transform: uppercase;
-
     }
   }
 
   .formulaire {
-
     form {
       display: flex;
       flex-wrap: wrap;
@@ -270,8 +256,6 @@
             margin-right: 30px;
           }
         }
-
-
       }
 
       .g-recaptcha {
@@ -297,7 +281,6 @@
         width: 100%;
       }
 
-
       .form-group:nth-child(5) {
         width: 100%;
         margin: 1rem 0;
@@ -320,31 +303,24 @@
           margin-top: -2px;
         }
       }
-      .success{
+      .success {
         color: white;
       }
     }
   }
 }
 
-@media screen and (max-width : 800px)
-{
-
+@media screen and (max-width: 800px) {
   #diapocontact {
     width: 90%;
     padding: 20px;
     .formulaire {
-
       form {
-
         .form-group {
           width: 100%;
           margin-right: 0;
         }
-
       }
     }
   }
 }
-
-
