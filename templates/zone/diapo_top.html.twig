@@ -66,7 +66,7 @@
 		<div class="btn-group">
 			{% for doc in zone.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
 				<div class="c-reserver">
-					<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
+					<a href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy" target="_blank">
 						<span>
 							<span>
 								<span>
