@@ -1,101 +1,122 @@
 <div class="zone diapo_top {{ zone.subtype }} {{ page.type.name }}">
-    {% if file_exist('img/logo.png') %}
+	{% if file_exist('img/logo.png') %}
 
-        <div class="logo">
-                <img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
-        </div>
+		<div class="logo">
+			<img data-src="{{ asset('img/logo.png') }}" class="lazy" alt="logo">
+		</div>
 
-    {% endif %}
+	{% endif %}
 
-    <div class="content">
-        <h{{zone.typehead}} class="title">{{ zone.detail(locale).title }}</h{{ zone.typehead}}>
-        {% if zone.detail(locale).title2 is not null %}
-            <h{{zone.typehead}} class="title">{{ zone.detail(locale).title2 }}</h{{ zone.typehead}}>
-        {% endif %}
-
-
-        <div class="desc">{{ zone.detail(locale).description | raw }}</div>
-        <div class="desc">{{ zone.detail(locale).description2 | raw }}</div>
-
-        {% for doc in zone.documents %}
-        <a class="btn" href="{{ asset('uploads/' ~ doc.file.file) }}" class="file-link" target="_blank">Voir les tarifs</a>
-        {% endfor %}
+	<div class="content">
+		<h{{zone.typehead}} class="title">{{ zone.detail(locale).title }}</h{{zone.typehead}}>
+		{% if zone.detail(locale).title2 is not null %}
+			<h{{zone.typehead}} class="title">{{ zone.detail(locale).title2 }}</h{{zone.typehead}}>
+		{% endif %}
 
 
-
-        {% if infos.resa is not null %}
-        <div class="c-reserver">
-            <a href="{{ infos.resa }}" target="_blank" class="reserver">
-              <span>
-                  <span>
-                    <span>{% trans %}Réserver Maintenant{% endtrans %}</span>
-                  </span>
-              </span>
-            </a>
-        </div>
+		<div class="desc">{{ zone.detail(locale).description | raw }}</div>
+		<div class="desc">{{ zone.detail(locale).description2 | raw }}</div>
 
 
-        {% endif %}
+		{% if infos.resa is not null %}
+			<div class="c-reserver">
+				<a href="{{ infos.resa }}" target="_blank" class="reserver">
+					<span>
+						<span>
+							<span>{% trans %}Réserver Maintenant{% endtrans %}</span>
+						</span>
+					</span>
+				</a>
+			</div>
 
-        {% for pageContact in pages | filter(pageContact => pageContact.type.name == "contact") %}
 
-            <div class="c-reserver">
-                <a data-fancybox href="#diapocontact" id="start" class="reserver fancy">
+		{% endif %}
 
-                    <span>
-                         <span>
-                            <span> {{pageContact.detail(locale).title}}</span>
-                         </span>
-                    </span>
-                </a>
 
-            </div>
-            <div id="diapocontact" style="display:none;">
-                <div class="text">
-                    <div class="titre">Nous Contacter</div>
-                </div>
-                <div class="formulaire">
-                    {{ render(controller(
+		{% for pageContact in pages | filter(pageContact => pageContact.type.name == "contact") %}
+
+			<div class="c-reserver">
+				<a data-fancybox href="#diapocontact" id="start" class="reserver fancy">
+					<span>
+						<span>
+							<span>
+								{{pageContact.detail(locale).title}}</span>
+						</span>
+					</span>
+				</a>
+
+			</div>
+			<div id="diapocontact" style="display:none;">
+				<div class="text">
+					<div class="titre">Nous Contacter</div>
+				</div>
+				<div class="formulaire">
+					{{ render(controller(
                         'App\\Controller\\ContactController::contact',
                         {'_locale':locale}
                     )) }}
-                </div>
-            </div>
+				</div>
+			</div>
 
 
-        {% endfor %}
+		{% endfor %}
 
-    </div>
-    {% if zone.videos.count != 0 %}
+		
+
+		<div class="btn-group">
+			{% for doc in zone.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
+				<div class="c-reserver">
+					<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
+						<span>
+							<span>
+								<span>
+									{{doc.file.originalName}}
+								</span>
+							</span>
+						</span>
+					</a>
+
+				</div>
+			{% endfor %}
+		</div>
 
 
-    <video loop muted  class="video-parallax"  playsinline>
-        <source src="{{ asset('uploads/'~ zone.videos.0.path) }}" type="video/mp4">
-    </video>
+	</div>
+	{% if zone.videos.count != 0 %}
 
-    {% else %}
 
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                {% for photo in zone.photos  %}
-                    <div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
-                        <img alt="{{ photo.detail(locale).title }}" />
-                        {% if photo.detail(locale).title is not null %}
-                            <div class="title">{{ photo.detail(locale).title }}</div>
-                        {% endif %}
-                    </div>
-                {% endfor %}
+		<video loop muted class="video-parallax" playsinline>
+			<source src="{{ asset('uploads/'~ zone.videos.0.path) }}" type="video/mp4">
+		</video>
 
-            </div>
-            <div class="swiper-controls">
-                <div class="swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
-                <div class="swiper-button-next"><i class="fal fa-chevron-right"></i></div>
-            </div>
-        </div>
-    {% endif %}
+	{% else %}
 
+		<div
+			class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div
+				class="swiper-wrapper">
+				<!-- Slides -->
+				{% for photo in zone.photos  %}
+					<div class="swiper-slide item photo " data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
+						<img alt="{{ photo.detail(locale).title }}"/>
+						{% if photo.detail(locale).title is not null %}
+							<div class="title">{{ photo.detail(locale).title }}</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="swiper-controls">
+				<div class="swiper-button-prev">
+					<i class="fal fa-chevron-left"></i>
+				</div>
+				<div class="swiper-button-next">
+					<i class="fal fa-chevron-right"></i>
+				</div>
+			</div>
+		</div>
+	{% endif %}
 
 
 </div>
