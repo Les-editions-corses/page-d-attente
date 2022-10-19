@@ -1606,6 +1606,8 @@ header .lienmenu:last-child {
 .zone.diapo_top .content .btn-group {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .zone.diapo_top .content .btn-text-group {
   display: flex;
