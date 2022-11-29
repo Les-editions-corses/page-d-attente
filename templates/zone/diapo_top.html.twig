@@ -61,25 +61,25 @@
 
 		{% endfor %}
 
-		
-
-		<div class="btn-group">
-			{% for doc in zone.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
-				<div class="c-reserver">
-					<a href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver" target="_blank">
-						<span>
+		<div class="btn-text-group">
+			<div class="desc">{{ zone.detail(locale).description3 | raw }}</div>
+			<div class="btn-group">
+				{% for doc in zone.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
+					<div class="c-reserver c-reserver-2">
+						<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
 							<span>
 								<span>
-									{{doc.file.originalName}}
+									<span>
+										{{doc.file.originalName}}
+									</span>
 								</span>
 							</span>
-						</span>
-					</a>
+						</a>
 
-				</div>
-			{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
 		</div>
-
 
 	</div>
 	{% if zone.videos.count != 0 %}

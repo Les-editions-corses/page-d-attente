@@ -1500,7 +1500,6 @@ header .lienmenu:last-child {
 .zone.diapo_top .content .btn {
   color: black;
   background: white;
-  padding: 7px 15px;
   font-size: 18px;
 }
 .zone.diapo_top .content .c-reserver {
@@ -1601,10 +1600,19 @@ header .lienmenu:last-child {
 .zone.diapo_top .content .c-reserver .reserver:hover {
   color: #03224c;
 }
+.zone.diapo_top .content .c-reserver-2 {
+  margin-top: 5px;
+}
 .zone.diapo_top .content .btn-group {
   display: flex;
   gap: 30px;
-  margin: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.zone.diapo_top .content .btn-text-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 .zone.diapo_top .swiper-container {
   position: absolute;
