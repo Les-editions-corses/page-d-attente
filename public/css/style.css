@@ -1348,6 +1348,10 @@ h6 {
 .photo.loaded > img {
   opacity: 1;
 }
+.documents-list {
+  display: flex;
+  flex-direction: column;
+}
 header {
   display: flex;
   background-color: transparent;
