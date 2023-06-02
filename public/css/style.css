@@ -1329,7 +1329,7 @@ h6 {
 }
 @font-face {
   font-family: 'NewYork';
-  src: url("NewYork.otf");
+  src: url('NewYork.otf');
   font-display: swap;
 }
 .zone .title {
@@ -1351,6 +1351,24 @@ h6 {
 .documents-list {
   display: flex;
   flex-direction: column;
+}
+.documents-list .document-button {
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 4px 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.125);
+  transition: 250ms box-shadow ease-out;
+}
+.documents-list .document-button:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
+}
+.documents-list .document-button + .document-button {
+  margin-top: 4px;
+}
+.documents-list .document-button i {
+  margin-right: 8px;
+  font-size: 16px;
 }
 header {
   display: flex;
@@ -1525,7 +1543,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .content .c-reserver .reserver:before,
 .zone.diapo_top .content .c-reserver .reserver:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   height: 1px;
@@ -1548,7 +1566,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .content .c-reserver .reserver > *:before,
 .zone.diapo_top .content .c-reserver .reserver > *:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   height: 100%;
@@ -1563,7 +1581,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .content .c-reserver .reserver > * > *:before,
 .zone.diapo_top .content .c-reserver .reserver > * > *:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   z-index: 9;
@@ -1583,7 +1601,7 @@ header .lienmenu:last-child {
 }
 .zone.diapo_top .content .c-reserver .reserver > * > * > *:before,
 .zone.diapo_top .content .c-reserver .reserver > * > * > *:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   z-index: 9;
