@@ -79,17 +79,12 @@
 					{% for element in elementType.elements %}
 						<div id="{{elementType.name}}" classname="documents" style="display:none;">
 							{% for doc in element.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
-								<div class="c-reserver c-reserver-2">
-									<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
-										<span>
-											<span>
-												<span>
-													{{doc.file.originalName}}
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
+								<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="document-button">
+									<i class="fas fa-file"></i>
+									<span>
+										{{doc.file.originalName}}
+									</span>
+								</a>
 							{% endfor %}
 						</div>
 					{% endfor %}
