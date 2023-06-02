@@ -69,7 +69,7 @@
 						<a data-fancybox href="#{{elementType.name}}" class="fancy">{{elementType.title}}</a>
 					</div>
 					{% for element in elementType.elements %}
-						<div id="{{elementType.name}}" classname="documents">
+						<div id="{{elementType.name}}" classname="documents" style="display:none;">
 							{% for doc in element.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
 								<div class="c-reserver c-reserver-2">
 									<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
