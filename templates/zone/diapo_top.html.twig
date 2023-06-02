@@ -66,13 +66,15 @@
 			<div class="btn-group">
 				{% for elementType in page.elementTypes %}
 					<div class="c-reserver c-reserver-2">
-						<span>
+						<a data-fancybox href="#{{elementType.name}}" class="fancy">
 							<span>
 								<span>
-									<a data-fancybox href="#{{elementType.name}}" class="fancy">{{elementType.title}}</a>
+									<span>
+										{{elementType.title}}
+									</span>
 								</span>
 							</span>
-						</span>
+						</a>
 					</div>
 					{% for element in elementType.elements %}
 						<div id="{{elementType.name}}" classname="documents" style="display:none;">
