@@ -1356,7 +1356,7 @@ h6 {
   display: flex;
   align-items: center;
   color: black;
-  padding: 4px 8px;
+  padding: 8px 12px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.125);
   transition: 250ms box-shadow ease-out;
 }
@@ -1364,11 +1364,12 @@ h6 {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
 }
 .documents-list .document-button + .document-button {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 .documents-list .document-button i {
   margin-right: 8px;
   font-size: 16px;
+  color: #03224c;
 }
 header {
   display: flex;
