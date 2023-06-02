@@ -64,6 +64,28 @@
 		<div class="btn-text-group">
 			<div class="desc">{{ zone.detail(locale).description3 | raw }}</div>
 			<div class="btn-group">
+				{% for elementType in page.elementTypes %}
+					<div class="c-reserver c-reserver-2">
+						<a data-fancybox href="#{{elementType.name}}" class="fancy">{{elementType.title}}</a>
+					</div>
+					{% for element in elementType.elements %}
+						<div id="{{elementType.name}}" classname="documents">
+							{% for doc in element.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
+								<div class="c-reserver c-reserver-2">
+									<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
+										<span>
+											<span>
+												<span>
+													{{doc.file.originalName}}
+												</span>
+											</span>
+										</span>
+									</a>
+								</div>
+							{% endfor %}
+						</div>
+					{% endfor %}
+				{% endfor %}
 				{% for doc in zone.documents | sort((a, b) => a.file.originalName <=> b.file.originalName) %}
 					<div class="c-reserver c-reserver-2">
 						<a data-fancybox href="{{ asset('uploads/' ~ doc.file.file) }}" id="start" class="reserver fancy">
