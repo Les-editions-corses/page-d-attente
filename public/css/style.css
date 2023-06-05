@@ -1473,7 +1473,7 @@ header .lienmenu:last-child {
   object-fit: cover;
 }
 .zone.diapo_top:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1692,13 +1692,15 @@ header .lienmenu:last-child {
     font-size: 14px;
   }
 }
-#diapocontact {
+#diapocontact,
+.documents {
   width: 60%;
   background: rgba(0, 0, 0, 0.3);
   color: black;
   padding: 6rem 8rem;
 }
-#diapocontact button {
+#diapocontact button,
+.documents button {
   text-transform: uppercase;
   cursor: pointer;
   background: white;
@@ -1707,29 +1709,34 @@ header .lienmenu:last-child {
   font-weight: 600;
   border: none;
 }
-#diapocontact .text .titre {
+#diapocontact .text .titre,
+.documents .text .titre {
   color: white;
   font-size: 1.8rem;
   margin-bottom: 50px;
   margin-top: 20px;
   text-transform: uppercase;
 }
-#diapocontact .formulaire form {
+#diapocontact .formulaire form,
+.documents .formulaire form {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-#diapocontact .formulaire form .form-group {
+#diapocontact .formulaire form .form-group,
+.documents .formulaire form .form-group {
   margin-bottom: 12px;
   width: 48%;
   text-align: left;
   margin-right: 4%;
   position: relative;
 }
-#diapocontact .formulaire form .form-group label {
+#diapocontact .formulaire form .form-group label,
+.documents .formulaire form .form-group label {
   display: none;
 }
-#diapocontact .formulaire form .form-group input {
+#diapocontact .formulaire form .form-group input,
+.documents .formulaire form .form-group input {
   border: none;
   background: white;
   height: 35px;
@@ -1742,10 +1749,13 @@ header .lienmenu:last-child {
   padding-left: 20px;
 }
 #diapocontact .formulaire form .form-group input:focus,
-#diapocontact .formulaire form .form-group textarea:focus {
+.documents .formulaire form .form-group input:focus,
+#diapocontact .formulaire form .form-group textarea:focus,
+.documents .formulaire form .form-group textarea:focus {
   outline: none;
 }
-#diapocontact .formulaire form .form-group textarea {
+#diapocontact .formulaire form .form-group textarea,
+.documents .formulaire form .form-group textarea {
   border: none;
   background: white;
   height: 150px;
@@ -1755,56 +1765,77 @@ header .lienmenu:last-child {
   font-weight: 600;
   width: calc(100%);
 }
-#diapocontact .formulaire form .form-group ::placeholder {
+#diapocontact .formulaire form .form-group ::placeholder,
+.documents .formulaire form .form-group ::placeholder {
   color: #555;
   font-size: 15px;
 }
-#diapocontact .formulaire form .form-group.type div {
+#diapocontact .formulaire form .form-group.type div,
+.documents .formulaire form .form-group.type div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#diapocontact .formulaire form .form-group.type input {
+#diapocontact .formulaire form .form-group.type input,
+.documents .formulaire form .form-group.type input {
   width: auto;
   height: auto;
   margin-left: 0;
 }
-#diapocontact .formulaire form .form-group.type label {
+#diapocontact .formulaire form .form-group.type label,
+.documents .formulaire form .form-group.type label {
   display: block;
   margin-right: 30px;
 }
-#diapocontact .formulaire form .g-recaptcha {
+#diapocontact .formulaire form .g-recaptcha,
+.documents .formulaire form .g-recaptcha {
   display: inline-block;
 }
 #diapocontact .formulaire form .form-group:nth-child(2),
+.documents .formulaire form .form-group:nth-child(2),
 #diapocontact .formulaire form .form-group:nth-child(3),
+.documents .formulaire form .form-group:nth-child(3),
 #diapocontact .formulaire form .form-group:nth-child(4),
+.documents .formulaire form .form-group:nth-child(4),
 #diapocontact .formulaire form .form-group:nth-child(5),
+.documents .formulaire form .form-group:nth-child(5),
 #diapocontact .formulaire form .form-group:nth-child(6),
-#diapocontact .formulaire form .form-group:nth-child(7) {
+.documents .formulaire form .form-group:nth-child(6),
+#diapocontact .formulaire form .form-group:nth-child(7),
+.documents .formulaire form .form-group:nth-child(7) {
   margin-right: 0;
 }
 #diapocontact .formulaire form .form-group:nth-child(3),
+.documents .formulaire form .form-group:nth-child(3),
 #diapocontact .formulaire form .form-group:nth-child(4),
+.documents .formulaire form .form-group:nth-child(4),
 #diapocontact .formulaire form .form-group:nth-child(5),
+.documents .formulaire form .form-group:nth-child(5),
 #diapocontact .formulaire form .form-group:nth-child(6),
+.documents .formulaire form .form-group:nth-child(6),
 #diapocontact .formulaire form .form-group:nth-child(7),
+.documents .formulaire form .form-group:nth-child(7),
 #diapocontact .formulaire form .form-group:nth-child(9),
-#diapocontact .formulaire form .form-group:nth-child(8) {
+.documents .formulaire form .form-group:nth-child(9),
+#diapocontact .formulaire form .form-group:nth-child(8),
+.documents .formulaire form .form-group:nth-child(8) {
   width: 100%;
 }
-#diapocontact .formulaire form .form-group:nth-child(5) {
+#diapocontact .formulaire form .form-group:nth-child(5),
+.documents .formulaire form .form-group:nth-child(5) {
   width: 100%;
   margin: 1rem 0;
   margin-bottom: 2rem;
 }
-#diapocontact .formulaire form .form-group:nth-child(5) label {
+#diapocontact .formulaire form .form-group:nth-child(5) label,
+.documents .formulaire form .form-group:nth-child(5) label {
   display: inline-block;
   position: relative;
   top: -4px;
   color: white;
 }
-#diapocontact .formulaire form .form-group:nth-child(5) input {
+#diapocontact .formulaire form .form-group:nth-child(5) input,
+.documents .formulaire form .form-group:nth-child(5) input {
   border: unset;
   opacity: 1;
   pointer-events: all;
@@ -1813,15 +1844,16 @@ header .lienmenu:last-child {
   height: 20px;
   margin-top: -2px;
 }
-#diapocontact .formulaire form .success {
+#diapocontact .formulaire form .success,
+.documents .formulaire form .success {
   color: white;
 }
 @media screen and (max-width: 800px) {
-  #diapocontact {
+  #diapocontact .documents {
     width: 90%;
     padding: 20px;
   }
-  #diapocontact .formulaire form .form-group {
+  #diapocontact .documents .formulaire form .form-group {
     width: 100%;
     margin-right: 0;
   }
