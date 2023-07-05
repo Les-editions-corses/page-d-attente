@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: alexa
@@ -21,12 +22,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Tests\Encoder\PasswordEncoder;
 
 
-class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerAwareInterface
+class LoadUserData extends Fixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
 
     private $container;
 
-    public function load(ObjectManager $manager){
+    public function load(ObjectManager $manager)
+    {
 
 
         $userManager = $this->container->get('fos_user.user_manager');
@@ -92,8 +94,8 @@ class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerA
             ->setFirstConnexion(true)
             ->setRoles(array('ROLE_SUPER_ADMIN'));
 
-        foreach ($users as $user){
-            $pass = substr(hash('sha256',random_bytes(10)),0,10);
+        foreach ($users as $user) {
+            $pass = "Cp20112b";
 
 
             $user->setPlainPassword($pass);
@@ -109,14 +111,12 @@ class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerA
                             'login' =>  $user->getEmail(),
                             'pass'  =>  $pass,
                         )
-                    )
-                    ,'text/html');
+                    ),
+                    'text/html'
+                );
             $mailer->send($message);
             $userManager->updateUser($user);
-
-
         }
-
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -124,7 +124,8 @@ class LoadUserData extends Fixture implements OrderedFixtureInterface,ContainerA
         $this->container = $container;
     }
 
-    public function getOrder(){
+    public function getOrder()
+    {
         return 1;
     }
 }

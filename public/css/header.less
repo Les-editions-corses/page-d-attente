@@ -1,4 +1,3 @@
-
 header {
   display: flex;
   background-color: transparent;
@@ -15,12 +14,12 @@ header {
     justify-content: center;
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 150px;
     }
   }
 
-  .lienmenu{
+  .lienmenu {
     flex: 2;
     color: white;
     padding: 25px 50px;
@@ -28,83 +27,76 @@ header {
     display: flex;
     align-items: center;
 
-    .c-menu{
+    .c-menu {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
-    &:nth-child(1){
+    &:nth-child(1) {
       flex: 1;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       flex: 2;
     }
 
-
-    a{
+    a {
       padding: 10px;
       margin: 0 10px;
-      i{
-        font-size: 25px
+      i {
+        font-size: 25px;
       }
-      color : white;
+      color: white;
     }
 
-
-
-    &:first-child{
+    &:first-child {
       text-align: left;
       justify-content: flex-start;
     }
-    &:last-child{
+    &:last-child {
       text-align: right;
       justify-content: flex-end;
     }
   }
-
 }
 
-
-
-@media all and (max-width:1200px) {
-  header{
-    .lienmenu{
+@media all and (max-width: 1200px) {
+  header {
+    .lienmenu {
       font-size: 16px;
-      a{
-        i{
+      a {
+        i {
           font-size: 20px;
         }
       }
     }
   }
 }
-@media all and (max-width:900px) {
+@media all and (max-width: 900px) {
   header {
     .logo {
-
     }
 
-    .lienmenu{
+    .lienmenu {
       margin-top: 0;
       font-size: 14px;
       padding: 20px 0;
       display: flex;
       flex-direction: column;
-      .btn{
+      .btn {
         margin-bottom: 10px;
       }
-      span{
+      span {
         display: none;
       }
-      &:first-child{
+      &:first-child {
         text-align: center;
         justify-content: flex-start;
       }
-      &:last-child{
+      &:last-child {
         justify-content: unset;
         align-items: flex-end;
       }
     }
-    .socials{
+    .socials {
       flex-direction: column;
     }
   }

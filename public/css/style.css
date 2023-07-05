@@ -1377,7 +1377,7 @@ header .lienmenu {
 }
 header .lienmenu .c-menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 header .lienmenu:nth-child(1) {
   flex: 1;
@@ -1784,4 +1784,3 @@ header .lienmenu:last-child {
     margin-right: 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
